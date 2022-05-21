@@ -1,0 +1,646 @@
+                * {
+                    padding: 0;
+                    margin: 0;
+                    text-decoration: none;
+                    font-family: 'Roboto', sans-serif;
+                    list-style: none;
+                    box-sizing: border-box;
+                }
+                
+                body {
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 100vh;
+                }
+                /* Nav bar*/
+                
+                nav {
+                    background-color: #d70000;
+                    height: 80px;
+                    width: 100%;
+                }
+                
+                .enlace {
+                    position: absolute;
+                    padding: 20px 50px;
+                }
+                
+                .logo {
+                    height: 40px;
+                }
+                
+                nav ul {
+                    float: right;
+                    margin-right: 20px;
+                }
+                
+                nav ul li {
+                    display: inline-block;
+                    line-height: 80px;
+                    margin: 0px 5px;
+                }
+                
+                nav ul li a {
+                    color: white;
+                    font-size: 18px;
+                    padding: 7px 13px;
+                    border-radius: 3px;
+                    text-transform: uppercase;
+                }
+                
+                li a.active,
+                li a:hover {
+                    background-color: #191b24;
+                    transition: .5s;
+                }
+                
+                .checkbtn {
+                    font-size: 30px;
+                    color: white;
+                    float: right;
+                    line-height: 80px;
+                    margin-right: 40px;
+                    cursor: pointer;
+                    display: none;
+                    padding-left: 20px;
+                }
+                
+                #check {
+                    display: none;
+                }
+                
+                @media (max-width: 952px) {
+                    .enlace {
+                        padding-left: 20px;
+                    }
+                    nav ul li a {
+                        font-size: 16px;
+                    }
+                }
+                
+                @media (max-width: 810px) {
+                    .checkbtn {
+                        display: block;
+                    }
+                    ul {
+                        position: fixed;
+                        width: 100%;
+                        height: 100vh;
+                        background: #ff4040;
+                        top: 77px;
+                        left: -100%;
+                        z-index: 3;
+                        transition: all 0.5s;
+                        text-align: center;
+                    }
+                    nav ul li {
+                        display: block;
+                        margin: 50px 0;
+                        line-height: 30px;
+                    }
+                    nav ul li a {
+                        font-size: 20px;
+                    }
+                    li a:hover,
+                    li a.active {
+                        background: none;
+                        color: white;
+                    }
+                    #check:checked~ul {
+                        left: 0;
+                    }
+                }
+                
+                @media (max-width: 500px) {
+                    ul {
+                        text-align: center;
+                    }
+                }
+                /* Nav Bar */
+                /* Main */
+                /* Galeria Menu */
+                
+                .fotoBienvenida {
+                    width: 100%;
+                    margin-top: -3px;
+                }
+                
+                .contenedorMenu {
+                    margin: 100px 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                }
+                
+                .contenedorMenu div {
+                    margin: 20px;
+                    cursor: pointer;
+                }
+                
+                .contenedorMenu div:hover {
+                    transform: scale(105%);
+                    -webkit-box-shadow: 0px 0px 19px 4px rgba(0, 0, 0, 0.28);
+                    box-shadow: 0px 0px 19px 4px rgba(0, 0, 0, 0.28);
+                    transition: .5s;
+                }
+                
+                .contenedorMenu div img {
+                    max-width: 450px;
+                }
+                
+                @media (max-width: 952px) {
+                    .contenedorFotoB {
+                        width: 100%;
+                        height: 300px;
+                        background-image: url("imgIÑAKI/fotobase.jpg");
+                        background-size: cover;
+                        background-position: right top;
+                    }
+                    .fotoBienvenida {
+                        display: none;
+                    }
+                    .contenedorMenu div img {
+                        max-width: 350px;
+                    }
+                }
+                
+                @media (max-width: 810px) {
+                    .contenedorMenu div img {
+                        max-width: 80vw;
+                    }
+                }
+                /* Galeria Menu*/
+                /* iFrame*/
+                
+                #ubicacion {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+                
+                #ubicacion h3 {
+                    font-size: 40px;
+                }
+                
+                .barra {
+                    width: 50vw;
+                    height: 10px;
+                    background-color: #d70000;
+                }
+                
+                #ubicacion h3,
+                #ubicacion div {
+                    margin: 40px;
+                }
+                
+                .iframe {
+                    border: 10px #d70000 solid;
+                    border-radius: 10px;
+                }
+                
+                .iframe iframe {
+                    width: 600px;
+                    height: 450px;
+                }
+                
+                @media (max-width: 500px) {
+                    #ubicacion {
+                        text-align: center;
+                        flex-wrap: nowrap;
+                    }
+                    #ubicacion h3 {
+                        font-size: 28px;
+                    }
+                    #ubicacion h3,
+                    #ubicacion div {
+                        margin: 20px;
+                    }
+                    .barra {
+                        width: 80vw;
+                        height: 4px;
+                    }
+                    .iframe {
+                        width: 80vw;
+                        border: 6px solid #d70000;
+                    }
+                    .iframe iframe {
+                        width: 100%;
+                    }
+                }
+                /*iFrame*/
+                /*Footer*/
+                
+                footer {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: white;
+                    background-color: #d70000;
+                    margin-top: auto;
+                }
+                
+                .redesSociales {
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                
+                .redesSociales a {
+                    margin: 10px 20px;
+                    color: wheat;
+                }
+                
+                .redesSociales a i {
+                    font-size: 30px;
+                }
+                
+                .creador {
+                    background-color: #880000;
+                    width: 100%;
+                    text-align: center;
+                }
+                
+                .creador a {
+                    color: wheat;
+                }
+                
+                @media (max-width: 500px) {
+                    .redesSociales a {
+                        margin: 8px 20px;
+                    }
+                    .redesSociales a i {
+                        font-size: 30px;
+                    }
+                    .creador {
+                        font-size: 13px;
+                        padding: 5px 0px;
+                    }
+                }
+                /*Footer*/
+                /*Subir boton*/
+                
+                .botonSubir {
+                    font-size: 60px;
+                    position: fixed;
+                    right: 8%;
+                    bottom: 5%;
+                }
+                
+                .botonSubir a {
+                    color: #880000;
+                    scroll-behavior: smooth;
+                }
+                
+                @media (max-width: 500px) {
+                    .botonSubir {
+                        font-size: 46px;
+                        right: 5%;
+                        bottom: 10%;
+                    }
+                }
+                /*Subir boton*/
+                /*Sobre nosotros*/
+                
+                #sobreNosotros {
+                    margin-bottom: 160px;
+                }
+                
+                .parent {
+                    margin-left: 50vw;
+                    margin-right: 50vw;
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .div2,
+                .div3 {
+                    font-size: 1.5em;
+                    margin: 60px 20vw 20px 20vw;
+                }
+                
+                @media (max-width: 952px) {
+                    .div2,
+                    .div3 {
+                        font-size: 1.8em;
+                    }
+                }
+                
+                @media (max-width: 810px) {
+                    .div1 video {
+                        width: 95vw;
+                    }
+                }
+                
+                @media(max-width: 500px) {
+                    .div1 video {
+                        width: 90vw;
+                    }
+                    .div2,
+                    .div3 {
+                        margin: 30px 40px;
+                    }
+                    .div2 p,
+                    .div3 p {
+                        font-size: 18px;
+                    }
+                    #sobreNosotros {
+                        margin-bottom: 100px;
+                    }
+                }
+                /*Sobre nosotros*/
+                /*FORMULARIO =======*/
+                
+                .mainSection {
+                    height: 100%;
+                    display: flex;
+                }
+                
+                .form_wrap {
+                    width: 1050px;
+                    height: 530px;
+                    margin: 50px auto;
+                    background: white;
+                    display: flex;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+                }
+                
+                .contact_info::before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #ff4040e5;
+                    opacity: 0.9;
+                }
+                
+                .contact_info {
+                    width: 38%;
+                    position: relative;
+                    background-image: url("imgIÑAKI/foto1.jpg");
+                    background-size: cover;
+                    background-position: right;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .info_title,
+                .info_items {
+                    position: relative;
+                    z-index: 2;
+                    color: rgb(255, 255, 255);
+                }
+                
+                .info_title {
+                    margin-bottom: 60px;
+                }
+                
+                .info_title span {
+                    font-size: 100px;
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                
+                .info_title h2 {
+                    font-size: 35px;
+                    text-align: center;
+                }
+                
+                .info_items p {
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 16px;
+                }
+                
+                .info_items p:nth-child(1) span {
+                    font-size: 30px;
+                    margin-right: 16px;
+                }
+                
+                .info_items p:nth-child(2) span {
+                    font-size: 40px;
+                    margin-right: 16px;
+                }
+                
+                form.form_contact {
+                    width: 62%;
+                    padding: 30px 40px;
+                }
+                
+                form.form_contact h2 {
+                    font-size: 25px;
+                    font-weight: 600;
+                    color: #303030;
+                    margin-bottom: 30px;
+                }
+                
+                form.form_contact .user_info {
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                form.form_contact label {
+                    font-weight: 600;
+                }
+                
+                form.form_contact input,
+                form.form_contact textarea {
+                    width: 100%;
+                    border: none;
+                    border-bottom: 2px solid #d1d1d1;
+                    padding: 8px 0px 5px;
+                    color: rgb(83, 83, 83);
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-bottom: 15px;
+                }
+                
+                form.form_contact textarea {
+                    max-width: 100%;
+                    min-height: 40px;
+                    max-height: 120px;
+                    min-width: 100%;
+                }
+                
+                form.form_contact input[type="button"] {
+                    width: 180px;
+                    background-color: #ff4040;
+                    color: white;
+                    pad: 10px;
+                    border-radius: 25px;
+                    border: none;
+                    align-self: flex-end;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+                
+                form.form_contact input[type="button"]:hover {
+                    background-color: #d70000;
+                    box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.151);
+                    font-weight: bold;
+                }
+                
+                 :focus {
+                    outline: none;
+                }
+                
+                @media (max-width: 1080px) {
+                    .form_wrap {
+                        display: flex;
+                        flex-direction: column;
+                        width: 90vw;
+                        height: 100%;
+                        margin: 40px auto;
+                    }
+                    .contact_info {
+                        width: 100%;
+                    }
+                    form.form_contact {
+                        width: 100%;
+                        font-size: 23px;
+                    }
+                    form.form_contact input,
+                    form.form_contact textarea {
+                        font-size: 21px;
+                    }
+                    form.form_contact input[type="button"] {
+                        width: 80%;
+                        align-self: center;
+                        font-size: 23px;
+                    }
+                    .info_title span {
+                        margin-top: 20px;
+                    }
+                    .info_items p {
+                        font-size: 22px;
+                        margin-bottom: 40px;
+                    }
+                    .info_items p:nth-child(1) span {
+                        font-size: 33px;
+                        margin-right: 16px;
+                    }
+                    .info_items p:nth-child(2) span {
+                        font-size: 43px;
+                        margin-right: 16px;
+                    }
+                }
+                
+                @media (max-width: 500px) {
+                    .info_title {
+                        margin-bottom: 30px;
+                    }
+                    .info_title span {
+                        margin-top: 40px;
+                        font-size: 60px;
+                    }
+                    .info_title h2 {
+                        font-size: 21px;
+                        text-align: center;
+                    }
+                    .info_items {
+                        margin-bottom: 20px;
+                    }
+                    .info_items p {
+                        font-size: 17px;
+                        margin-bottom: 20px;
+                    }
+                    .info_items p:nth-child(1) span {
+                        font-size: 22px;
+                        margin-right: 10px;
+                    }
+                    .info_items p:nth-child(2) span {
+                        font-size: 27px;
+                        margin-right: 10px;
+                    }
+                    form.form_contact {
+                        padding: 30px 25px;
+                    }
+                    .form_contact h2 {
+                        font-size: 21px;
+                    }
+                    .form_contact label {
+                        font-size: 18px;
+                    }
+                    .form_contact input {
+                        font-size: 12px;
+                    }
+                    form.form_contact input[type="button"] {
+                        margin-top: 15px;
+                        width: 100%;
+                        font-size: 18px;
+                    }
+                }
+                /*FORMULARIO =======*/
+                /* VENTANA DE ERRORES*/
+                
+                #ventanaErrores {
+                    width: 100%;
+                    height: 100vh;
+                    background: rgba(0, 0, 0, 0.7);
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 3;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .mensajesError {
+                    background: white;
+                    border-radius: 15px;
+                    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+                    width: 400px;
+                    padding: 30px 20px 15px;
+                }
+                
+                .mensajesError h3 {
+                    text-align: center;
+                    font-size: 20px;
+                }
+                
+                .mensajesError h3::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background: #c5c5c5;
+                    margin: 10px 0px 15px;
+                }
+                
+                .mensajesError p {
+                    font-size: 16px;
+                    color: #606060;
+                }
+                
+                .mensajesError p i {
+                    color: rgb(255, 60, 60);
+                    margin-right: 8px;
+                }
+                
+                #btnCerrar {
+                    font-size: 16px;
+                    padding: 3px 10px;
+                    margin-top: 10px;
+                    background: rgb(255, 60, 60);
+                    color: white;
+                    border: 3px solid #ffb6b6;
+                    cursor: pointer;
+                    float: right;
+                }
+                
+                @media (max-width: 500px) {
+                    .mensajesError {
+                        width: 70vw;
+                    }
+                }
+                /* VENTANA DE ERRORES*/

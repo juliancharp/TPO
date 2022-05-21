@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ebb8db5445.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- <div class="ventanaErrores">
+        <div class="mensajesError">
+            <h3>Errores encontrados</h3>
+            <p><i class="fa-solid fa-xmark"></i>Escriba un nombre</p>
+            <p><i class='fa-solid fa-xmark'></i>Ingrese un correo</p>
+            <p><i class='fa-solid fa-xmark'></i>Escriba un mensaje</p>
+            <button id="btnCerrar">Cerrar</button>
+
+            <button onclick="botonCerrar()" id="btnCerrar">Cerrar</button>
+        </div>
+    </div> -->
+    <header id="Home">
+        <nav>
+            <input type="checkbox" name="" id="check">
+            <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i> 
+        </label>
+            <a href="index.html" class="enlace">
+                <img src="imgIÑAKI/logo.png" class="logo" alt="logo">
+            </a>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="mainSection">
+            <div class="form_wrap">
+                <aside class="contact_info">
+                    <div class="info_title">
+                        <span class="fa fa-user-circle"></span>
+                        <h2>INFORMARCION DE CONTACTO</h2>
+                    </div>
+                    <div class="info_items">
+                        <p><span class="fa fa-envelope"></span> ignaciouriona94@yahoo.com.ar
+                        </p>
+                        <p><span class="fa fa-mobile"></span> +54 11 3483-8324
+                        </p>
+                    </div>
+                </aside>
+                <form action="" class="form_contact">
+                    <h2>Contactanos</h2>
+                    <div class="user_info">
+                        <label for="names">Nombres *</label>
+                        <input type="text" name="" id="names">
+
+                        <label for="phone">Teléfono / Celular</label>
+                        <input type="text" name="" id="phone">
+
+                        <label for="correo">Correo Electrónico *</label>
+                        <input type="email" id="correo">
+
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea name="" id="mensaje"></textarea>
+
+                        <input onclick="botonEnviar(form.correo.value)" type="button" value="Enviar Mensaje" id="btnSend">
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+        <div class="botonSubir">
+            <a href="#Home"><i class="fa-solid fa-circle-up"></i></a>
+        </div>
+    </main>
+    <footer>
+        <div class="redesSociales">
+            <a href="https://www.instagram.com/inakirestaurante/"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="https://www.facebook.com/Inakirestaurante/"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="https://www.google.com/maps/place/Iñaki+Restaurante/@-34.612163,-58.3854375,15z/data=!4m5!3m4!1s0x0:0x1850fe25bf5b056c!8m2!3d-34.6121452!4d-58.3854386"><i class="fa-brands fa-google"></i></a>
+        </div>
+        <div class="creador">
+            <p>Diseño: Julian Charpentier | email: <a href="mailto:julian.favotto@gmail.com">julian.favotto@gmail.com</a> 2022</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
