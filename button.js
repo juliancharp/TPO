@@ -131,7 +131,7 @@ if (correo == '' || mailConArroba) {
 } else {
     alert("ingresa un correo valido")
 }*/
-function llamarBoton() {
+/*function llamarBoton() {
     function validarCorreo(correo) {
         var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
         var esValido = expReg.test(correo);
@@ -143,6 +143,17 @@ function llamarBoton() {
     }
     validarCorreo()
 
-}
+}*/
 
 juli = "julian.favotto@gmail.com"
+
+function llamarBoton() {
+    num = document.getElementById("numero").value;
+    parseInt(num);
+    console.log(num);
+    if (num == '' || isNaN(num)) {
+        console.log("No es un numero")
+    } else {
+        console.log("es una numero")
+    }
+}

@@ -7,7 +7,7 @@ function botonEnviar() {
     //ERROR
     errores = '';
     // VALIDACION DE NOMBRE----
-    if (names == '' || names !== isNaN) {
+    if (names == '' || !isNaN(names)) {
         errores += "<p><i class='fa-solid fa-xmark'></i>Escriba un nombre</p>"
         document.getElementById("names").style.borderBottomColor = "red";
     } else {
@@ -15,7 +15,7 @@ function botonEnviar() {
     }
     //VALIDACION DE EMAIL----
 
-    if (email == '' || email !== isNaN) {
+    if (email == '' || !isNaN(email)) {
         errores += "<p><i class='fa-solid fa-xmark'></i>Ingrese un correo</p>"
         document.getElementById("correo").style.borderBottomColor = "red";
     } else {
@@ -25,7 +25,7 @@ function botonEnviar() {
     /*==========
     AQUI INTENTE DE VARIAS FORMAS HACER LA VALIDACION POR EMAIL PERO SIGO SIN LOGRARLO Y YA HE VISTO VARIOS TUTORIALES
     ============
-    
+
     function validarCorreo(correo) {
         var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
         var esValido = expReg.test(correo);
